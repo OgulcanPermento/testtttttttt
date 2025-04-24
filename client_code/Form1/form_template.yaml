@@ -1,0 +1,560 @@
+components:
+- data_bindings: []
+  layout_properties: {slot: left-nav}
+  name: button_4
+  properties:
+    background: theme:Primary Overlay 3
+    font: ''
+    font_size: 16
+    foreground: theme:On Primary Container
+    icon: fa:dashboard
+    icon_align: left
+    spacing:
+      margin: ['30', null, null, null]
+      padding: ['10', '40', null, '40']
+    text: Dashboard
+  type: Button
+- layout_properties: {slot: title}
+  name: image_1
+  properties: {height: 45, source: _/theme/logo_512x155_transparant.png}
+  type: Image
+- components:
+  - layout_properties: {full_width_row: true, grid_position: 'OVDGFA,GYORXS'}
+    name: spacer_2
+    properties: {height: 30}
+    type: Spacer
+  - layout_properties: {grid_position: 'OVDGFA,TEWPEX'}
+    name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+  - event_bindings: {change: start_date_change}
+    layout_properties: {grid_position: 'OVDGFA,LBBCOA'}
+    name: start_date
+    properties:
+      background: theme:On Secondary
+      foreground: theme:On Primary Container
+      format: '%d-%m-%Y'
+      margin: ['0', '35', '0', null]
+      placeholder: start datum
+      role: outlined
+    type: DatePicker
+  - event_bindings: {change: end_date_change}
+    layout_properties: {grid_position: 'OVDGFA,LIMBJN'}
+    name: end_date
+    properties:
+      background: theme:On Secondary
+      foreground: theme:On Background
+      format: '%d-%m-%Y'
+      margin: ['0', '35', '0', null]
+      placeholder: eind datum
+      role: outlined
+    type: DatePicker
+  - event_bindings: {show: plot_1_show}
+    layout_properties: {full_width_row: true, grid_position: 'LHYSBT,LHNOBV', row_background: ''}
+    name: plot_1
+    properties:
+      height: '250'
+      margin: [null, '35', null, '35']
+      visible: true
+    type: Plot
+  - data_bindings:
+    - {code: '', property: data, writeback: false}
+    event_bindings: {show: plot_2_show}
+    layout_properties: {full_width_row: true, grid_position: 'LHYSBT,MATNUA'}
+    name: plot_2
+    properties:
+      height: '250'
+      margin: [null, '35', '20', null]
+    type: Plot
+  - event_bindings: {show: plot_3_show}
+    layout_properties: {full_width_row: true, grid_position: 'GBPWVS,PVPGHM'}
+    name: plot_3
+    properties:
+      height: '350'
+      margin: ['35', 35, null, '35']
+    type: Plot
+  - components:
+    - data_bindings: []
+      layout_properties: {full_width_row: true, grid_position: 'ESNTWB,PGMWEK'}
+      name: rich_text_3
+      properties:
+        align: center
+        content: Aantal afgenomen collegiale checks
+        enable_slots: true
+        font: ''
+        font_size: 14
+        format: markdown
+        spacing:
+          margin: [null, '15', null, '15']
+        visible: true
+      type: RichText
+    - components:
+      - components:
+        - event_bindings: {click: link_click}
+          layout_properties: {column: XCSGCH}
+          name: link_5
+          properties:
+            align: left
+            background: ''
+            bold: true
+            border: ''
+            col_spacing: medium
+            col_widths: ''
+            font: ''
+            font_size: null
+            foreground: theme:On Primary Container
+            icon: ''
+            icon_align: left
+            italic: false
+            role: null
+            spacing:
+              padding: ['8', null, null, null]
+            spacing_above: small
+            spacing_below: small
+            text: Achternaam
+            tooltip: ''
+            underline: false
+            url: ''
+            visible: true
+            wrap_on: mobile
+          type: Link
+        - event_bindings: {click: link_click}
+          layout_properties: {column: QUJTFV}
+          name: link_6
+          properties:
+            align: left
+            background: ''
+            bold: true
+            border: ''
+            col_spacing: medium
+            col_widths: ''
+            font: ''
+            font_size: null
+            foreground: theme:On Primary Container
+            icon: ''
+            icon_align: left
+            italic: false
+            role: null
+            spacing:
+              padding: ['8', null, null, null]
+            spacing_above: small
+            spacing_below: small
+            text: Voornaam
+            tooltip: ''
+            underline: false
+            url: ''
+            visible: true
+            wrap_on: mobile
+          type: Link
+        - event_bindings: {click: link_click}
+          layout_properties: {column: CUUPLL}
+          name: link_7
+          properties:
+            align: left
+            background: ''
+            bold: true
+            border: ''
+            col_spacing: medium
+            col_widths: ''
+            font: ''
+            font_size: null
+            foreground: theme:On Primary Container
+            icon: ''
+            icon_align: left
+            italic: false
+            role: null
+            spacing:
+              padding: ['8', null, null, null]
+            spacing_above: small
+            spacing_below: small
+            text: Email adres
+            tooltip: ''
+            underline: false
+            url: ''
+            visible: true
+            wrap_on: mobile
+          type: Link
+        - event_bindings: {click: link_click}
+          layout_properties: {column: IPOUKT}
+          name: link_8
+          properties:
+            align: left
+            foreground: theme:On Primary Container
+            spacing:
+              padding: ['8', null, null, null]
+            text: 'Team '
+          type: Link
+        - layout_properties: {column: 'null'}
+          name: canvas_1_copy
+          properties: {background: '#878b8c', height: '1.5'}
+          type: Canvas
+        - event_bindings: {}
+          layout_properties: {column: UYNNHC}
+          name: link_9
+          properties: {foreground: 'theme:On Primary Container', text: Aantal}
+          type: Link
+        - layout_properties: {column: 'null'}
+          name: repeating_panel_1
+          properties: {item_template: Form1.ItemTemplate1}
+          type: RepeatingPanel
+        data_bindings: []
+        name: data_row_panel_3
+        properties:
+          bold: true
+          border: ''
+          margin: [null, '15.', null, '15']
+        type: DataRowPanel
+      event_bindings: {}
+      layout_properties: {full_width_row: true, grid_position: 'GLEIOV,FVZXAO'}
+      name: data_grid_1
+      properties:
+        auto_header: false
+        background: ''
+        border: ''
+        columns:
+        - {data_key: column_1, id: XCSGCH, title: Column 1}
+        - {data_key: column_2, id: QUJTFV, title: Column 2}
+        - {data_key: column_3, id: CUUPLL, title: Column 3}
+        - {data_key: column_4, id: IPOUKT, title: Column 4}
+        - {data_key: column_5, id: UYNNHC, title: Column 5}
+        foreground: ''
+        margin: [0, 21, 0, null]
+        role: null
+        rows_per_page: 20
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        tooltip: ''
+        visible: true
+      type: DataGrid
+    event_bindings: {show: data_grid_1_show}
+    layout_properties: {full_width_row: true, grid_position: 'HWTPJO,EUWCNV'}
+    name: outlined_card_1
+    properties:
+      background: theme:On Secondary
+      role: outlined-card
+      spacing:
+        margin: ['35', '35', null, '35']
+    type: ColumnPanel
+  - components:
+    - layout_properties: {full_width_row: true, grid_position: 'UCADKG,ZOABKE'}
+      name: rich_text_2
+      properties:
+        align: center
+        content: Aantal uitgevoerde collegiale checks
+        font_size: 16
+        spacing:
+          margin: [null, '15', null, '15']
+      type: RichText
+    - components:
+      - name: repeating_panel_2
+        properties: {item_template: Form1.RowTemplate3}
+        type: RepeatingPanel
+      event_bindings: {}
+      layout_properties: {full_width_row: true, grid_position: 'QKTHKR,XJRSNF'}
+      name: data_grid_2
+      properties:
+        auto_header: true
+        columns:
+        - {data_key: achternaam, id: JKSDUP, title: Achternaam}
+        - {data_key: voornaam, id: VJQQOR, title: Voornaam}
+        - {data_key: email-adres, id: OJLQEN, title: Email adres}
+        - {data_key: locatie, id: MBTGVA, title: Team}
+        - {data_key: count, id: WIFXPE, title: Aantal}
+        margin: [0, '15', null, '15']
+      type: DataGrid
+    data_bindings: []
+    event_bindings: {show: data_grid_2_show}
+    layout_properties: {full_width_row: true, grid_position: 'SCUJCI,NFASLI'}
+    name: outlined_card_2
+    properties:
+      background: theme:On Secondary
+      foreground: ''
+      role: outlined-card
+      spacing:
+        margin: ['35', '35', null, '35']
+    type: ColumnPanel
+  - components:
+    - layout_properties: {full_width_row: true, grid_position: 'ACKOTB,CSCESQ'}
+      name: rich_text_1
+      properties:
+        align: center
+        content: Handeling resultaten
+        font_size: 16
+        spacing:
+          margin: [null, '15', null, '15']
+      type: RichText
+    - event_bindings: {change: search_box_change, pressed_enter: search_box_pressed_enter}
+      layout_properties: {full_width_row: true, grid_position: 'PURITP,MHYVPJ'}
+      name: search_box
+      properties:
+        background: theme:On Secondary
+        enabled: true
+        margin: [null, '15', null, '15']
+        placeholder: zoek...
+        role: null
+      type: TextBox
+    - layout_properties: {full_width_row: false, grid_position: 'PURITP,OGWGTZ'}
+      name: spacer_4
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {grid_position: 'PURITP,JNAKJF'}
+      name: spacer_3
+      properties: {height: 32}
+      type: Spacer
+    - components:
+      - components:
+        - event_bindings: {click: link_click}
+          layout_properties: {column: XCSGCH}
+          name: link_1
+          properties:
+            align: left
+            background: ''
+            bold: true
+            border: ''
+            col_spacing: medium
+            col_widths: ''
+            font: ''
+            font_size: null
+            foreground: theme:On Primary Container
+            icon: ''
+            icon_align: left
+            italic: false
+            role: null
+            spacing:
+              padding: ['8', null, null, null]
+            spacing_above: small
+            spacing_below: small
+            text: Handeling
+            tooltip: ''
+            underline: false
+            url: ''
+            visible: true
+            wrap_on: mobile
+          type: Link
+        - event_bindings: {click: link_click}
+          layout_properties: {column: QUJTFV}
+          name: link_2
+          properties:
+            align: left
+            background: ''
+            bold: true
+            border: ''
+            col_spacing: medium
+            col_widths: ''
+            font: ''
+            font_size: null
+            foreground: theme:On Primary Container
+            icon: ''
+            icon_align: left
+            italic: false
+            role: null
+            spacing:
+              padding: ['8', null, null, null]
+            spacing_above: small
+            spacing_below: small
+            text: Aantal checks
+            tooltip: ''
+            underline: false
+            url: ''
+            visible: true
+            wrap_on: mobile
+          type: Link
+        - event_bindings: {click: link_click}
+          layout_properties: {column: CUUPLL}
+          name: link_3
+          properties:
+            align: left
+            background: ''
+            bold: true
+            border: ''
+            col_spacing: medium
+            col_widths: ''
+            font: ''
+            font_size: null
+            foreground: theme:On Primary Container
+            icon: ''
+            icon_align: left
+            italic: false
+            role: null
+            spacing:
+              padding: ['8', null, null, null]
+            spacing_above: small
+            spacing_below: small
+            text: Aantal failed
+            tooltip: ''
+            underline: false
+            url: ''
+            visible: true
+            wrap_on: mobile
+          type: Link
+        - event_bindings: {click: link_click}
+          layout_properties: {column: IPOUKT}
+          name: link_4
+          properties:
+            align: left
+            foreground: theme:On Primary Container
+            spacing:
+              padding: ['8', null, null, null]
+            text: Aantal passed
+          type: Link
+        - layout_properties: {column: 'null'}
+          name: canvas_1
+          properties: {background: '#878b8c', height: '1.5'}
+          type: Canvas
+        - data_bindings: []
+          layout_properties: {}
+          name: repeating_panel_3
+          properties: {item_template: Form1.RowTemplate4, role: null, visible: true}
+          type: RepeatingPanel
+        data_bindings: []
+        name: data_row_panel_2
+        properties:
+          bold: true
+          border: ''
+          margin: [null, '15.', null, '15']
+        type: DataRowPanel
+      event_bindings: {}
+      layout_properties: {full_width_row: true, grid_position: 'PKEVPL,DTZWJN'}
+      name: data_grid_3
+      properties:
+        auto_header: false
+        background: ''
+        border: ''
+        columns:
+        - {data_key: column_1, id: XCSGCH, title: Column 1}
+        - {data_key: column_2, id: QUJTFV, title: Column 2}
+        - {data_key: column_3, id: CUUPLL, title: Column 3}
+        - {data_key: column_4, id: IPOUKT, title: Column 4}
+        foreground: ''
+        margin: [0, 21, 0, null]
+        role: null
+        rows_per_page: 20
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        tooltip: ''
+        visible: true
+      type: DataGrid
+    event_bindings: {show: data_grid_3_show}
+    layout_properties: {full_width_row: true, grid_position: 'HHUTGL,VCUWBJ'}
+    name: outlined_card_3
+    properties:
+      background: theme:On Secondary
+      role: outlined-card
+      spacing:
+        margin: ['35', '35', null, '35']
+    type: ColumnPanel
+  - components:
+    - components:
+      - components:
+        - layout_properties: {column: JKSDUP}
+          name: link_10
+          properties: {bold: true, text: Assessor Achternaam}
+          type: Link
+        - layout_properties: {column: VJQQOR}
+          name: link_11
+          properties: {bold: true, text: Assessor Voornaam}
+          type: Link
+        - layout_properties: {column: OJLQEN}
+          name: link_12
+          properties: {bold: true, text: Assessor Email-adres}
+          type: Link
+        - layout_properties: {column: KKQKPR}
+          name: link_13
+          properties: {bold: true, text: Team}
+          type: Link
+        - layout_properties: {column: FENWBX}
+          name: link_14
+          properties: {bold: true, text: Assessor Checks}
+          type: Link
+        - layout_properties: {}
+          name: repeating_panel_4
+          properties: {item_template: Form1.ItemTemplate1}
+          type: RepeatingPanel
+        name: data_row_panel_1
+        properties: {}
+        type: DataRowPanel
+      event_bindings: {}
+      layout_properties: {full_width_row: true, grid_position: 'UEMUPL,BLSZCW'}
+      name: data_grid_4
+      properties:
+        auto_header: false
+        columns:
+        - {data_key: column_1, id: JKSDUP, title: Column 1}
+        - {data_key: column_2, id: VJQQOR, title: Column 2}
+        - {data_key: column_3, id: OJLQEN, title: Column 3}
+        - {data_key: column_4, id: KKQKPR, title: Column 4}
+        - {data_key: column_5, id: FENWBX, title: Column 5}
+      type: DataGrid
+    event_bindings: {show: data_grid_4_show}
+    layout_properties: {full_width_row: true, grid_position: 'IYSJNU,CBBUJT'}
+    name: outlined_card_4
+    properties:
+      background: theme:On Secondary
+      role: outlined-card
+      spacing:
+        margin: [null, '35', null, '35']
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: column_panel_1
+  properties:
+    border: '  '
+    col_spacing: huge
+    spacing:
+      padding: [null, 7, null, 8]
+  type: ColumnPanel
+- components:
+  - components:
+    - event_bindings: {}
+      layout_properties: {}
+      name: button_1
+      properties:
+        align: right
+        font_size: 26
+        icon: fa:language
+        spacing:
+          margin: ['4', null, null, null]
+          padding: ['4', '12', null, '12']
+        spacing_above: none
+        spacing_below: none
+        text: ''
+      type: Button
+    - layout_properties: {}
+      name: button_3
+      properties:
+        align: right
+        font_size: 26
+        icon: fa:bell-o
+        spacing:
+          margin: ['4', null, null, null]
+          padding: ['4', '12', null, '12']
+        spacing_above: none
+        spacing_below: none
+        text: ''
+      type: Button
+    - layout_properties: {}
+      name: button_2
+      properties:
+        align: right
+        font_size: 26
+        icon: fa:user-circle
+        spacing:
+          margin: ['4', null, null, null]
+          padding: ['4', '12', null, '12']
+        spacing_above: none
+        spacing_below: none
+        text: ''
+      type: Button
+    name: flow_panel_1_copy
+    properties: {}
+    type: FlowPanel
+  layout_properties: {slot: nav-right}
+  name: flow_panel_1
+  properties: {}
+  type: FlowPanel
+container:
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
+  properties: {background: 'theme:Primary Overlay 1', html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

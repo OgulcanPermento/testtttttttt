@@ -1,0 +1,111 @@
+allow_embedding: false
+correct_dependency_ids: {}
+db_schema:
+  assessments:
+    client: none
+    columns:
+    - admin_ui: {order: 1, width: 200}
+      name: email-adres
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: voornaam
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: achternaam
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: locatie
+      type: string
+    - admin_ui: {order: 5, width: 200}
+      name: score
+      type: number
+    - admin_ui: {order: 6, width: 200}
+      name: resultaat
+      type: string
+    - admin_ui: {order: 7, width: 200}
+      name: assessor
+      type: string
+    - admin_ui: {order: 8, width: 200}
+      name: opleiding
+      type: string
+    - admin_ui: {order: 9, width: 200}
+      name: zorgproces
+      type: string
+    - admin_ui: {order: 10, width: 200}
+      name: handeling
+      type: string
+    - admin_ui: {order: 0, width: 200}
+      name: datum
+      type: date
+    server: full
+    title: assessments
+  assessments_v2:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: datum
+      type: date
+    - admin_ui: {order: 1, width: 200}
+      name: email-adres
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: voornaam
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: achternaam
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: locatie
+      type: string
+    - admin_ui: {order: 4.25, width: 200}
+      name: score
+      type: number
+    - admin_ui: {order: 6, width: 200}
+      name: assessor
+      type: string
+    - admin_ui: {order: 7, width: 200}
+      name: handeling
+      type: string
+    - admin_ui: {order: 8, width: 200}
+      name: aantal_stappen
+      type: number
+    - admin_ui: {order: 9, width: 200}
+      name: beoordeling
+      type: string
+    - admin_ui: {order: 4.5, width: 200}
+      name: resultaat
+      type: string
+    server: full
+    title: assessments_v2
+  files:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: path
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: file
+      type: media
+    - admin_ui: {order: 2, width: 200}
+      name: file_version
+      type: string
+    server: full
+    title: Files
+dependencies: []
+metadata: {description: dashboard permento prototype, title: dashboard permento prototype}
+name: Clone of Clone of Clone of Clone of dashboard permento prototype V2.1
+package_name: dashboard_permento_prototype
+renamed: true
+runtime_options:
+  client_version: '3'
+  server_spec: {base: python310-minimal}
+  server_version: python3-sandbox
+  version: 2
+services:
+- client_config: {enable_v2: true}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/files.yml
+startup_form: Form1

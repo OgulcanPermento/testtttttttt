@@ -1,0 +1,6 @@
+components: []
+container:
+  properties:
+    margin: [null, null, '-10', null]
+  type: DataRowPanel
+is_package: true

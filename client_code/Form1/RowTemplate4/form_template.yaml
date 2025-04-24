@@ -1,0 +1,64 @@
+components:
+- data_bindings:
+  - {code: 'self.item[''handeling'']', property: text, writeback: false}
+  event_bindings: {click: column_1_click}
+  layout_properties: {column: XCSGCH}
+  name: column_1
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+- data_bindings:
+  - {code: 'self.item[''aantal_handeling_checks'']', property: text, writeback: false}
+  event_bindings: {click: column_2_click}
+  layout_properties: {column: QUJTFV}
+  name: column_2
+  properties:
+    align: left
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+- data_bindings:
+  - {code: 'self.item[''aantal_failed'']', property: text, writeback: false}
+  event_bindings: {click: column_3_click}
+  layout_properties: {column: CUUPLL}
+  name: column_3
+  properties:
+    align: left
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+- components: []
+  data_bindings:
+  - {code: 'self.item[''aantal_passed'']', property: text, writeback: false}
+  event_bindings: {click: column_4_click}
+  layout_properties: {column: IPOUKT}
+  name: column_4
+  properties:
+    align: left
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+container:
+  data_bindings:
+  - {code: '', property: item, writeback: false}
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
+  properties:
+    auto_display_data: true
+    italic: false
+    margin: [null, null, '-5', null]
+    underline: false
+  type: DataRowPanel
+is_package: true

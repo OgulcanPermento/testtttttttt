@@ -1,0 +1,66 @@
+components:
+- data_bindings:
+  - {code: 'self.item[''achternaam'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,SAVEEB'}
+  name: column_10
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: ['30', null, '15', null]
+  type: Link
+- components: []
+  data_bindings:
+  - {code: 'self.item[''voornaam'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,UYAPTF'}
+  name: column_11
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+- components: []
+  data_bindings:
+  - {code: 'self.item[''email-adres'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,CYNBLB'}
+  name: column_12
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+- components: []
+  data_bindings:
+  - {code: 'self.item[''locatie'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,XIACMQ'}
+  name: column_13
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+- data_bindings:
+  - {code: 'str(self.item[''count''])', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,EKWFIE'}
+  name: column_14
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: [null, null, '15', null]
+  type: Link
+container: {type: ColumnPanel}
+is_package: true
