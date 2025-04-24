@@ -93,7 +93,7 @@ db_schema:
     title: Files
 dependencies: []
 metadata: {description: dashboard permento prototype, title: dashboard permento prototype}
-name: Clone of Clone of Clone of Clone of dashboard permento prototype V2.1
+name: dashboard permento prototype V2.2
 package_name: dashboard_permento_prototype
 renamed: true
 runtime_options:

@@ -1,3 +1,63 @@
-components: []
+components:
+- data_bindings:
+  - {code: 'self.item[''voornaam'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {column: QUJTFV}
+  name: column_11
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: ['4', null, '15', null]
+  type: Link
+- data_bindings:
+  - {code: 'self.item[''achternaam'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {column: XCSGCH}
+  name: column_10
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: ['4', null, '15', null]
+  type: Link
+- data_bindings:
+  - {code: 'self.item[''email-adres'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {column: CUUPLL}
+  name: column_12
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: ['4', null, '15', null]
+  type: Link
+- data_bindings:
+  - {code: 'self.item[''locatie'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {column: IPOUKT}
+  name: column_13
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: ['4', null, '15', null]
+  type: Link
+- data_bindings:
+  - {code: 'self.item[''count'']', property: text, writeback: false}
+  event_bindings: {}
+  layout_properties: {column: UYNNHC}
+  name: column_14
+  properties:
+    bold: false
+    foreground: theme:On Primary Container
+    role: body
+    spacing:
+      margin: ['4', null, '15', null]
+  type: Link
 container: {type: DataRowPanel}
 is_package: true

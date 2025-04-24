@@ -9,7 +9,7 @@ components:
     foreground: theme:On Primary Container
     role: body
     spacing:
-      margin: ['30', null, '15', null]
+      margin: ['4', null, '15', null]
   type: Link
 - components: []
   data_bindings:

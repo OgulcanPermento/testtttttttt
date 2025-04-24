@@ -2,8 +2,8 @@ components:
 - data_bindings:
   - {code: 'self.item[''achternaam'']', property: text, writeback: false}
   event_bindings: {}
-  layout_properties: {column: XCSGCH}
-  name: column_5
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,SAVEEB'}
+  name: column_10
   properties:
     bold: false
     foreground: theme:On Primary Container
@@ -15,54 +15,52 @@ components:
   data_bindings:
   - {code: 'self.item[''voornaam'']', property: text, writeback: false}
   event_bindings: {}
-  layout_properties: {column: QUJTFV}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,UYAPTF'}
   name: column_6
   properties:
     bold: false
     foreground: theme:On Primary Container
     role: body
     spacing:
-      margin: ['4', null, '15', null]
+      margin: [null, null, '15', null]
   type: Link
 - components: []
   data_bindings:
   - {code: 'self.item[''email-adres'']', property: text, writeback: false}
   event_bindings: {}
-  layout_properties: {column: CUUPLL}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,CYNBLB'}
   name: column_7
   properties:
     bold: false
     foreground: theme:On Primary Container
     role: body
     spacing:
-      margin: ['4', null, '15', null]
+      margin: [null, null, '15', null]
   type: Link
 - components: []
   data_bindings:
   - {code: 'self.item[''locatie'']', property: text, writeback: false}
   event_bindings: {}
-  layout_properties: {column: IPOUKT}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,XIACMQ'}
   name: column_8
   properties:
     bold: false
     foreground: theme:On Primary Container
     role: body
     spacing:
-      margin: ['4', null, '15', null]
+      margin: [null, null, '15', null]
   type: Link
 - data_bindings:
-  - {code: 'self.item[''count'']', property: text, writeback: false}
+  - {code: 'str(self.item[''count''])', property: text, writeback: false}
   event_bindings: {}
-  layout_properties: {column: UYNNHC}
+  layout_properties: {full_width_row: true, grid_position: 'XGKRYM,EKWFIE'}
   name: column_9
   properties:
     bold: false
     foreground: theme:On Primary Container
     role: body
     spacing:
-      margin: ['4', null, '15', null]
+      margin: [null, null, '15', null]
   type: Link
-container:
-  properties: {bold: false}
-  type: DataRowPanel
+container: {type: ColumnPanel}
 is_package: true
