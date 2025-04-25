@@ -5,6 +5,7 @@ components:
   layout_properties: {column: XCSGCH}
   name: column_5
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -18,6 +19,7 @@ components:
   layout_properties: {column: QUJTFV}
   name: column_6
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -31,6 +33,7 @@ components:
   layout_properties: {column: CUUPLL}
   name: column_7
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -44,6 +47,7 @@ components:
   layout_properties: {column: IPOUKT}
   name: column_8
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -56,6 +60,7 @@ components:
   layout_properties: {column: UYNNHC}
   name: column_9
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body

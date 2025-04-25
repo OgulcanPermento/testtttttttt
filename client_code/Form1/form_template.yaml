@@ -112,14 +112,14 @@ components:
           layout_properties: {column: XCSGCH}
           name: link_5
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -140,14 +140,14 @@ components:
           layout_properties: {column: QUJTFV}
           name: link_6
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -168,14 +168,14 @@ components:
           layout_properties: {column: CUUPLL}
           name: link_7
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -196,7 +196,8 @@ components:
           layout_properties: {column: IPOUKT}
           name: link_8
           properties:
-            align: left
+            align: center
+            font_size: 13
             foreground: theme:On Primary Container
             spacing:
               padding: ['8', null, null, null]
@@ -209,7 +210,13 @@ components:
         - event_bindings: {click: link_click}
           layout_properties: {column: UYNNHC}
           name: link_9
-          properties: {foreground: 'theme:On Primary Container', text: Aantal}
+          properties:
+            align: center
+            font_size: 13
+            foreground: theme:On Primary Container
+            spacing:
+              padding: ['8', null, null, null]
+            text: Aantal
           type: Link
         - layout_properties: {column: ''}
           name: repeating_panel_1
@@ -294,14 +301,14 @@ components:
           layout_properties: {column: XCSGCH}
           name: link_10
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -322,14 +329,14 @@ components:
           layout_properties: {column: QUJTFV}
           name: link_11
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -350,14 +357,14 @@ components:
           layout_properties: {column: CUUPLL}
           name: link_12
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -378,7 +385,8 @@ components:
           layout_properties: {column: IPOUKT}
           name: link_13
           properties:
-            align: left
+            align: center
+            font_size: 13
             foreground: theme:On Primary Container
             spacing:
               padding: ['8', null, null, null]
@@ -392,6 +400,8 @@ components:
           layout_properties: {column: UYNNHC}
           name: link_14
           properties:
+            align: center
+            font_size: 13
             foreground: theme:On Primary Container
             spacing:
               padding: ['8', null, null, null]
@@ -399,7 +409,7 @@ components:
           type: Link
         - layout_properties: {}
           name: repeating_panel_4
-          properties: {item_template: Form1.ItemTemplate1}
+          properties: {item_template: Form1.RowTemplate1}
           type: RepeatingPanel
         data_bindings: []
         name: data_row_panel_4
@@ -475,14 +485,14 @@ components:
           layout_properties: {column: XCSGCH}
           name: link_1
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -503,14 +513,14 @@ components:
           layout_properties: {column: QUJTFV}
           name: link_2
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -531,14 +541,14 @@ components:
           layout_properties: {column: CUUPLL}
           name: link_3
           properties:
-            align: left
+            align: center
             background: ''
             bold: true
             border: ''
             col_spacing: medium
             col_widths: ''
             font: ''
-            font_size: null
+            font_size: 13
             foreground: theme:On Primary Container
             icon: ''
             icon_align: left
@@ -559,7 +569,8 @@ components:
           layout_properties: {column: IPOUKT}
           name: link_4
           properties:
-            align: left
+            align: center
+            font_size: 13
             foreground: theme:On Primary Container
             spacing:
               padding: ['8', null, null, null]

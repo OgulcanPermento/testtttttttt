@@ -5,6 +5,7 @@ components:
   layout_properties: {column: XCSGCH}
   name: column_1
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -17,7 +18,7 @@ components:
   layout_properties: {column: QUJTFV}
   name: column_2
   properties:
-    align: left
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -30,7 +31,7 @@ components:
   layout_properties: {column: CUUPLL}
   name: column_3
   properties:
-    align: left
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -44,7 +45,7 @@ components:
   layout_properties: {column: IPOUKT}
   name: column_4
   properties:
-    align: left
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -56,6 +57,7 @@ container:
   - {code: '', property: item, writeback: false}
   event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
   properties:
+    align: center
     auto_display_data: true
     italic: false
     margin: [null, null, '-5', null]

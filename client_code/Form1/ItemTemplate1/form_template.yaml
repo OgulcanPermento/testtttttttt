@@ -5,6 +5,7 @@ components:
   layout_properties: {full_width_row: true, grid_position: 'XGKRYM,SAVEEB'}
   name: column_10
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -18,6 +19,7 @@ components:
   layout_properties: {full_width_row: true, grid_position: 'XGKRYM,UYAPTF'}
   name: column_11
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -31,6 +33,7 @@ components:
   layout_properties: {full_width_row: true, grid_position: 'XGKRYM,CYNBLB'}
   name: column_12
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -44,6 +47,7 @@ components:
   layout_properties: {full_width_row: true, grid_position: 'XGKRYM,XIACMQ'}
   name: column_13
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
@@ -56,6 +60,7 @@ components:
   layout_properties: {full_width_row: true, grid_position: 'XGKRYM,EKWFIE'}
   name: column_14
   properties:
+    align: center
     bold: false
     foreground: theme:On Primary Container
     role: body
