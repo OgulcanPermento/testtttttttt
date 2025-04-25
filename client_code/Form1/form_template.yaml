@@ -222,6 +222,7 @@ components:
           border: ''
           margin: [null, '15.', null, '15']
         type: DataRowPanel
+      data_bindings: []
       event_bindings: {}
       layout_properties: {full_width_row: true, grid_position: 'GLEIOV,FVZXAO'}
       name: data_grid_1
@@ -396,12 +397,12 @@ components:
               padding: ['8', null, null, null]
             text: Aantal
           type: Link
-        - layout_properties: {column: ''}
+        - layout_properties: {}
           name: repeating_panel_4
           properties: {item_template: Form1.ItemTemplate1}
           type: RepeatingPanel
         data_bindings: []
-        name: data_row_panel_3_copy
+        name: data_row_panel_4
         properties:
           bold: true
           border: ''
@@ -450,7 +451,7 @@ components:
         spacing:
           margin: [null, '15', null, '15']
       type: RichText
-    - event_bindings: {change: search_box_change, pressed_enter: search_box_pressed_enter}
+    - event_bindings: {change: search_box_change}
       layout_properties: {full_width_row: true, grid_position: 'PURITP,MHYVPJ'}
       name: search_box
       properties:

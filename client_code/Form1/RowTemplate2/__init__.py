@@ -12,3 +12,23 @@ class RowTemplate2(RowTemplate2Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def column_5_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam']} {self.item['achternaam']} heeft {self.item['count']} checks afgenomen")
+
+  def column_6_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam' ]} {self.item['achternaam']} heeft {self.item['count']} checks afgenomen")
+
+  def column_7_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam' ]} {self.item['achternaam']} heeft {self.item['count']} checks afgenomen")
+
+  def column_8_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam' ]} {self.item['achternaam']} heeft {self.item['count']} checks afgenomen")
+
+  def column_9_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam' ]} {self.item['achternaam']} heeft {self.item['count']} checks afgenomen")

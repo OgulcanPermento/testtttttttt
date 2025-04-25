@@ -1,7 +1,7 @@
 components:
 - data_bindings:
   - {code: 'self.item[''achternaam'']', property: text, writeback: false}
-  event_bindings: {}
+  event_bindings: {click: column_5_click}
   layout_properties: {column: XCSGCH}
   name: column_5
   properties:
@@ -14,7 +14,7 @@ components:
 - components: []
   data_bindings:
   - {code: 'self.item[''voornaam'']', property: text, writeback: false}
-  event_bindings: {}
+  event_bindings: {click: column_6_click}
   layout_properties: {column: QUJTFV}
   name: column_6
   properties:
@@ -27,7 +27,7 @@ components:
 - components: []
   data_bindings:
   - {code: 'self.item[''email-adres'']', property: text, writeback: false}
-  event_bindings: {}
+  event_bindings: {click: column_7_click}
   layout_properties: {column: CUUPLL}
   name: column_7
   properties:
@@ -40,7 +40,7 @@ components:
 - components: []
   data_bindings:
   - {code: 'self.item[''locatie'']', property: text, writeback: false}
-  event_bindings: {}
+  event_bindings: {click: column_8_click}
   layout_properties: {column: IPOUKT}
   name: column_8
   properties:
@@ -52,7 +52,7 @@ components:
   type: Link
 - data_bindings:
   - {code: 'self.item[''count'']', property: text, writeback: false}
-  event_bindings: {}
+  event_bindings: {click: column_9_click}
   layout_properties: {column: UYNNHC}
   name: column_9
   properties:
