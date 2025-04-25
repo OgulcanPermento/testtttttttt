@@ -265,72 +265,86 @@ class Form1(Form1Template):
         self.repeating_panel_4.items = gefilterde_resultaten_4
 
     def link_click(self, **event_args):
-        # Toggle icon
-        if event_args['sender'].icon == 'fa:caret-down':
-            event_args['sender'].icon = 'fa:caret-up'
-        elif event_args['sender'].icon == 'fa:caret-up':
-            event_args['sender'].icon = 'fa:caret-down'
-        else:
-            event_args['sender'].icon = 'fa:caret-down'
+      # Toggle icon
+      if event_args['sender'].icon == 'fa:caret-down':
+          event_args['sender'].icon = 'fa:caret-up'
+      elif event_args['sender'].icon == 'fa:caret-up':
+          event_args['sender'].icon = 'fa:caret-down'
+      else:
+          event_args['sender'].icon = 'fa:caret-down'
+  
+      clicked_column = None
+      for column, link in self.link_map.items():
+          if link == event_args['sender']:
+              clicked_column = column
+              break
+  
+      # Reset only icons in the same panel group
+      panel_columns = {
+          'panel_3': ['column_1', 'column_2', 'column_3', 'column_4'],
+          'panel_1': ['column_5', 'column_6', 'column_7', 'column_8', 'column_9'],
+          'panel_4': ['column_10', 'column_11', 'column_12', 'column_13', 'column_14']
+      }
+  
+      # Determine current panel group
+      current_group = None
+      for group, columns in panel_columns.items():
+          if clicked_column in columns:
+              current_group = columns
+              break
+  
+      for column, link in self.link_map.items():
+          if column != clicked_column and column in current_group:
+              link.icon = 'fa:sort'
+  
+      reverse = event_args['sender'].icon == 'fa:caret-up'
+  
+      # Sort repeating_panel_3 (Handelingen)
+      if clicked_column in panel_columns['panel_3']:
+          current_data = self.repeating_panel_3.items
+  
+          if clicked_column == 'column_1':
+              sorted_data = sorted(current_data, key=lambda k: str(k['handeling']).lower(), reverse=reverse)
+          elif clicked_column == 'column_2':
+              sorted_data = sorted(current_data, key=lambda k: k['aantal_handeling_checks'], reverse=reverse)
+          elif clicked_column == 'column_3':
+              sorted_data = sorted(current_data, key=lambda k: k['aantal_failed'], reverse=reverse)
+          elif clicked_column == 'column_4':
+              sorted_data = sorted(current_data, key=lambda k: k['aantal_passed'], reverse=reverse)
+  
+          self.repeating_panel_3.items = sorted_data
+  
+      # Sort repeating_panel_1 (Email stats)
+      elif clicked_column in panel_columns['panel_1']:
+          current_data = self.repeating_panel_1.items
+  
+          if clicked_column == 'column_5':
+              sorted_data = sorted(current_data, key=lambda k: str(k['achternaam']).lower(), reverse=reverse)
+          elif clicked_column == 'column_6':
+              sorted_data = sorted(current_data, key=lambda k: k['voornaam'], reverse=reverse)
+          elif clicked_column == 'column_7':
+              sorted_data = sorted(current_data, key=lambda k: k['email-adres'], reverse=reverse)
+          elif clicked_column == 'column_8':
+              sorted_data = sorted(current_data, key=lambda k: k['locatie'], reverse=reverse)
+          elif clicked_column == 'column_9':
+              sorted_data = sorted(current_data, key=lambda k: k['count'], reverse=reverse)
+  
+          self.repeating_panel_1.items = sorted_data
+  
+      # Sort repeating_panel_4 (Assessor info)
+      elif clicked_column in panel_columns['panel_4']:
+          current_data = self.repeating_panel_4.items
+  
+          if clicked_column == 'column_10':
+              sorted_data = sorted(current_data, key=lambda k: str(k['achternaam']).lower(), reverse=reverse)
+          elif clicked_column == 'column_11':
+              sorted_data = sorted(current_data, key=lambda k: k['voornaam'], reverse=reverse)
+          elif clicked_column == 'column_12':
+              sorted_data = sorted(current_data, key=lambda k: k['email-adres'], reverse=reverse)
+          elif clicked_column == 'column_13':
+              sorted_data = sorted(current_data, key=lambda k: k['locatie'], reverse=reverse)
+          elif clicked_column == 'column_14':
+              sorted_data = sorted(current_data, key=lambda k: k['count'], reverse=reverse)
+  
+          self.repeating_panel_4.items = sorted_data
 
-        clicked_column = None
-        for column, link in self.link_map.items():
-            if link == event_args['sender']:
-                clicked_column = column
-                break
-
-        # Reset icons of other links
-        for link in self.link_map.values():
-            if link != event_args['sender']:
-                link.icon = 'fa:sort'
-
-        reverse = event_args['sender'].icon == 'fa:caret-up'
-
-        # Sort repeating_panel_3 (Handelingen)
-        if clicked_column in ['column_1', 'column_2', 'column_3', 'column_4']:
-            current_data = self.repeating_panel_3.items
-
-            if clicked_column == 'column_1':
-                sorted_data = sorted(current_data, key=lambda k: str(k['handeling']).lower(), reverse=reverse)
-            elif clicked_column == 'column_2':
-                sorted_data = sorted(current_data, key=lambda k: k['aantal_handeling_checks'], reverse=reverse)
-            elif clicked_column == 'column_3':
-                sorted_data = sorted(current_data, key=lambda k: k['aantal_failed'], reverse=reverse)
-            elif clicked_column == 'column_4':
-                sorted_data = sorted(current_data, key=lambda k: k['aantal_passed'], reverse=reverse)
-
-            self.repeating_panel_3.items = sorted_data
-
-        # Sort repeating_panel_1 (Email stats)
-        elif clicked_column in ['column_5', 'column_6', 'column_7', 'column_8', 'column_9']:
-            current_data = self.repeating_panel_1.items
-
-            if clicked_column == 'column_5':
-                sorted_data = sorted(current_data, key=lambda k: str(k['achternaam']).lower(), reverse=reverse)
-            elif clicked_column == 'column_6':
-                sorted_data = sorted(current_data, key=lambda k: k['voornaam'], reverse=reverse)
-            elif clicked_column == 'column_7':
-                sorted_data = sorted(current_data, key=lambda k: k['email-adres'], reverse=reverse)
-            elif clicked_column == 'column_8':
-                sorted_data = sorted(current_data, key=lambda k: k['locatie'], reverse=reverse)
-            elif clicked_column == 'column_9':
-                sorted_data = sorted(current_data, key=lambda k: k['count'], reverse=reverse)
-
-            self.repeating_panel_1.items = sorted_data
-
-        # Sort repeating_panel_4 (Assessor info)
-        elif clicked_column in ['column_10', 'column_11', 'column_12', 'column_13', 'column_14']:
-            current_data = self.repeating_panel_4.items
-
-            if clicked_column == 'column_10':
-                sorted_data = sorted(current_data, key=lambda k: str(k['achternaam']).lower(), reverse=reverse)
-            elif clicked_column == 'column_11':
-                sorted_data = sorted(current_data, key=lambda k: k['voornaam'], reverse=reverse)
-            elif clicked_column == 'column_12':
-                sorted_data = sorted(current_data, key=lambda k: k['email-adres'], reverse=reverse)
-            elif clicked_column == 'column_13':
-                sorted_data = sorted(current_data, key=lambda k: k['locatie'], reverse=reverse)
-            elif clicked_column == 'column_14':
-                sorted_data = sorted(current_data, key=lambda k: k['count'], reverse=reverse)
-
-            self.repeating_panel_4.items = sorted_data

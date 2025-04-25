@@ -15,4 +15,20 @@ class RowTemplate1(RowTemplate1Template):
 
   def column_10_click(self, **event_args):
     """This method is called when the link is clicked"""
-    pass
+    alert(f"{self.item['voornaam']} {self.item['achternaam']} heeft {self.item['count']} checks uitgevoerd")
+
+  def column_11_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam']} {self.item['achternaam']} heeft {self.item['count']} checks uitgevoerd")
+
+  def column_12_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam']} {self.item['achternaam']} heeft {self.item['count']} checks uitgevoerd")
+
+  def column_13_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam']} {self.item['achternaam']} heeft {self.item['count']} checks uitgevoerd")
+
+  def column_14_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert(f"{self.item['voornaam']} {self.item['achternaam']} heeft {self.item['count']} checks uitgevoerd")

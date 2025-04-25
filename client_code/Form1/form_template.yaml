@@ -74,20 +74,10 @@ components:
       margin: ['35', 35, null, '35']
     type: Plot
   - components:
-    - data_bindings: []
-      layout_properties: {full_width_row: true, grid_position: 'ESNTWB,PGMWEK'}
-      name: rich_text_3
-      properties:
-        align: center
-        content: Aantal afgenomen collegiale checks
-        enable_slots: true
-        font: ''
-        font_size: 14
-        format: markdown
-        spacing:
-          margin: [null, '15', null, '15']
-        visible: true
-      type: RichText
+    - layout_properties: {grid_position: 'XHKXTU,VUAPUQ'}
+      name: label_2
+      properties: {align: center, bold: true, font_size: 17, text: Aantal afgenomen checks}
+      type: Label
     - event_bindings: {change: search_box_1_change}
       layout_properties: {full_width_row: true, grid_position: 'MWYWRJ,FTQTAE'}
       name: search_box_1
@@ -263,20 +253,10 @@ components:
         margin: ['35', '35', null, '35']
     type: ColumnPanel
   - components:
-    - data_bindings: []
-      layout_properties: {full_width_row: true, grid_position: 'ESNTWB,PGMWEK'}
-      name: rich_text_3_copy
-      properties:
-        align: center
-        content: Aantal uitgevoerde checks
-        enable_slots: true
-        font: ''
-        font_size: 14
-        format: markdown
-        spacing:
-          margin: [null, '15', null, '15']
-        visible: true
-      type: RichText
+    - layout_properties: {full_width_row: true, grid_position: 'NVGRXT,DMMTYF'}
+      name: label_3
+      properties: {align: center, bold: true, font_size: 17, text: Aantal uigevoerde checks}
+      type: Label
     - event_bindings: {change: search_box_4_change}
       layout_properties: {full_width_row: true, grid_position: 'AUTBGD,TZJHEC'}
       name: search_box_4
@@ -452,15 +432,10 @@ components:
         margin: ['35', '35', null, '35']
     type: ColumnPanel
   - components:
-    - layout_properties: {full_width_row: true, grid_position: 'ACKOTB,CSCESQ'}
-      name: rich_text_1
-      properties:
-        align: center
-        content: Handeling resultaten
-        font_size: 16
-        spacing:
-          margin: [null, '15', null, '15']
-      type: RichText
+    - layout_properties: {full_width_row: true, grid_position: 'UMTLYH,GQCFYH'}
+      name: label_1
+      properties: {align: center, bold: true, font_size: 17, text: Handeling resultaten}
+      type: Label
     - event_bindings: {change: search_box_change}
       layout_properties: {full_width_row: true, grid_position: 'PURITP,MHYVPJ'}
       name: search_box
