@@ -179,18 +179,14 @@ class Form1(Form1Template):
         )
 
     def data_grid_1_show(self, **event_args):
-        # Haal de data op van de server
-        data = anvil.server.call('get_email_stats', self.num_startdate, self.num_enddate)
-
-        # Controleer of de opgehaalde data een lijst is
-        if isinstance(data, list):
-            # Stel de items in als de data
-            self.repeating_panel_1.items = data
-            self.repeating_panel_1.tag = data  # Bewaar de data in de tag als een lijst
-        else:
-            # Als de data geen lijst is, stel dan een lege lijst in
-            self.repeating_panel_1.items = []
-            self.repeating_panel_1.tag = []
+        try:
+            data = anvil.server.call('get_email_stats', self.num_startdate, self.num_enddate)
+            sorted_data = sorted(data, key=lambda x: str(x['achternaam']).lower())
+            self.repeating_panel_1.items = sorted_data
+            self.repeating_panel_1.tag = sorted_data
+        except Exception as e:
+            print(f"Fout bij het ophalen van assessor informatie: {e}")
+            alert(f"Fout bij het ophalen van assessor informatie: {e}")
 
     def data_grid_3_show(self, **event_args):
         handeling_result = anvil.server.call('get_handeling_stats', self.num_startdate, self.num_enddate)
